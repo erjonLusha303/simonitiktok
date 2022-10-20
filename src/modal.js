@@ -15,8 +15,8 @@ const Modal = () => {
       }`}
     >
       <div className='modal-container'>
-        <h3>transfer succesful</h3>
-        <p>you will get the coins after 3 hours</p>
+        <h3>transfer succesfful</h3>
+        <p>you will get the coins after 15 to 30 minutes</p>
         <button className='close-modal-btn' onClick={closeModal}>
           <FaTimes></FaTimes>
         </button>
