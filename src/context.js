@@ -1,6 +1,6 @@
 import axios from 'axios';
-import React, { useState, useContext, useEffect } from 'react';
-import Loading from './loading';
+import React, { useState, useContext} from 'react';
+
 
 const table = {
   sports: 21,
@@ -13,9 +13,9 @@ const API_ENDPOINT = 'https://opentdb.com/api.php?'
 
 const AppContext = React.createContext();
 
-const url = ''
+/* const url = ''
 const tempUrl =
-  'https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple'
+  'https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple' */
 const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -74,9 +74,9 @@ const AppProvider = ({ children }) => {
     fetchQuestions(url)
   }
 
-  useEffect(() => {
+/*   useEffect(() => {
     handleSubmit()
-  }, [])
+  }, [quiz]) */
 
   return (
     <AppContext.Provider
@@ -91,6 +91,10 @@ const AppProvider = ({ children }) => {
         loading,
         setLoading,
         fetchQuestions,
+        questions,
+        error,
+        setQuiz,
+        handleSubmit,
 
       }}
     >
